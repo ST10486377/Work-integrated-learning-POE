@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en"><head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Calculate Fees</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head><body>
+  <header class="site-header small">
+    <div class="wrap header-inner">
+      <div class="brand">
+        <img src="assets/logo.png" alt="logo" class="logo">
+        <div class="brand-text"><h1>Empowering the Nation</h1></div>
+      </div>
+      <nav class="main-nav">
+        <ul class="nav-list">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="sixmonth.html">Six‑Month</a></li>
+          <li><a href="sixweek.html">Six‑Week</a></li>
+          <li><a href="calculate.html">Calculate Fees</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="wrap small-form">
+    <h2>Calculate Total Fees (Quote)</h2>
+    <p>Enter your details and select one or more courses to receive a quoted total. This is not a formal invoice.</p>
+
+    <form id="quote-form" onsubmit="return false;">
+      <label>Name <input id="name" type="text" required></label>
+      <label>Phone <input id="phone" type="tel" required></label>
+      <label>Email <input id="email" type="email" required></label>
+
+      <fieldset class="courses">
+        <legend>Select courses</legend>
+        <div id="courses-container"></div>
+      </fieldset>
+
+      <div class="actions">
+        <button class="btn primary" id="calculate-btn">Calculate Total</button>
+        <button onclick="window.history.back()" class="btn outline">Back</button>
+      </div>
+    </form>
+
+    <section id="quote-result" class="quote-result" aria-live="polite" hidden>
+    </section>
+  </main>
+
+  <footer class="site-footer small">
+    <div class="wrap footer-inner"><p>© 2025 Empowering the Nation</p></div>
+  </footer>
+
+  <script src="script.js"></script>
+</body></html>
